@@ -109,7 +109,7 @@ class Utility
         $DB      = $factory->database();
 
         $query = "SELECT ConsentID, Name, Label FROM consent";
-        $key   = "ConsentID";
+        $key    = "ConsentID";
 
         $result = $DB->pselectWithIndexKey($query, array(), $key);
 
