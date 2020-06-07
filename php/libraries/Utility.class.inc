@@ -106,10 +106,10 @@ class Utility
     static function getConsentList(): array
     {
         $factory = NDB_Factory::singleton();
-        $DB      = $factory->database();
+        $DB= $factory->database();
 
         $query = "SELECT ConsentID, Name, Label FROM consent";
-        $key    = "ConsentID";
+        $key = "ConsentID";
 
         $result = $DB->pselectWithIndexKey($query, array(), $key);
 
@@ -141,7 +141,7 @@ class Utility
         if (!$DCC) {
                 $whereElements[] = "CenterID <> 1";
         }
-        if (!empty($whereElements)) {
+        if (!empty($whereElements)){
             $query .= "WHERE ".implode(" AND ", $whereElements);
         }
         $result = $DB->pselect($query, array());
