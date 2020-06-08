@@ -146,7 +146,7 @@ class ImagingBrowserRowProvisioner extends \LORIS\Data\Provisioners\DBRowProvisi
         // ====================================================
 
         $left_joins = "";
-        foreach ($case_desc as $key => $value) {
+        foreach ($case_desc as $key => $value){
             $left_joins .= "
             LEFT JOIN (
               SELECT files.SessionID,
