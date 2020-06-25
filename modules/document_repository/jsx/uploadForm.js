@@ -82,7 +82,7 @@ class DocUploadForm extends Component {
               required={true}
               value={this.state.formData.category}
             />
-            <SearchableDropdown
+            <SelectElement
               name="forSite"
               label="Site"
               placeHolder="Search for site"
